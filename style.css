@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilory';
+    color: wheat;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: relative;
+}
+.elem {
+    height: 100px;
+    width: 100%;
+    border-bottom: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+}
+.elem h1 {
+    font-size: 8vw;
+    position: relative;
+    z-index: 2;
+    mix-blend-mode:difference;
+}
+.elem img {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    position: absolute;
+    /*transform: translate(-50%, -50%); /* done this to move image in center*/
+    opacity: 0;
+    transition:  all linear 0.3s;
+}

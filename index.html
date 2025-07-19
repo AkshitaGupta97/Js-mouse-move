@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Effect</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="elem" id="elem1">
+            <h1>Bugatti</h1>
+            <img src="https://media.istockphoto.com/id/1292510005/photo/ev-concept-car-on-asphalt-road-3d-rendering-with-my-own-creative-design.jpg?s=1024x1024&w=is&k=20&c=MadIp8_22B2A3R2v7rYRj6iGxzJp24m9R7_jsO8JwAI=" alt="">
+        </div>
+        <div class="elem">
+            <h1>Jagwar</h1>
+            <img src="https://media.istockphoto.com/id/607883554/photo/black-electric-suv-driving-on-arc-bridge.jpg?s=1024x1024&w=is&k=20&c=yydR1E8fsKK_1DHyeHZKwzKta-015OTsEYRlfm7lIKA=" alt="">
+        </div>
+        <div class="elem">
+            <h1>Auddi</h1>
+            <img src="https://media.istockphoto.com/id/1431471488/photo/luxury-sports-car-in-futuristic-corridor.jpg?s=1024x1024&w=is&k=20&c=WLw1Zb9xUEYMBNeDSFNx4JhaQZrfhTzSA9t6auy5OU8=" alt="">
+        </div>
+        <div class="elem">
+            <h1>Prochse</h1>
+            <img src="https://media.istockphoto.com/id/174860711/photo/yellow-supercar.jpg?s=1024x1024&w=is&k=20&c=QWi0P_V5fLuCqhuzAlflYhUmJI9GwYuxeFCriHmN9kA=" alt="">
+        </div>
+        
+    </div>
+
+    <script>
+
+        const elem = document.querySelectorAll('.elem')
+      //  const eleImg = document.querySelector('#elem1 img')
+
+        elem.forEach((item) => {
+           // console.log(item.childNodes[3])  // i have selected 3 beacuse, image is present int it
+
+            item.addEventListener('mouseenter', (event) => {
+                item.childNodes[3].style.opacity = '1';
+            })
+            item.addEventListener('mouseleave', (event) => {
+                item.childNodes[3].style.opacity = '0';
+            })
+            item.addEventListener('mousemove', (event) => {
+                item.childNodes[3].style.left = event.x+'px';
+              //  item.childNodes[3].style.top = event.y+'px';
+            })
+        })
+
+
+
+
+       /* elem1.addEventListener('mousemove', (event) => {
+            eleImg.style.left = event.x+'px';
+            eleImg.style.left = event.x+'px';
+        })
+
+        elem1.addEventListener('mouseenter', (event) => {
+            eleImg.style.opacity = 1;
+        })
+
+        elem1.addEventListener('mouseleave', (event) => {
+            eleImg.style.opacity = 0;
+        })
+            */
+
+
+    </script>
+</body>
+</html>
